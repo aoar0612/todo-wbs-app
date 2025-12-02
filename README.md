@@ -1,7 +1,63 @@
-# Tauri + React + Typescript
+# TODO-WBS デスクトップアプリ
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+日々のTODOとWBS（Work Breakdown Structure）を管理できるデスクトップアプリケーションです。
 
-## Recommended IDE Setup
+## 機能
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+- **WBSツリービュー**: プロジェクトとタスクを階層構造で管理
+- **ガントチャート**: タイムライン表示でタスクの期間を視覚化、ドラッグ&ドロップで期間調整
+- **日別TODO管理**: 日付ごとにタスクを管理
+- **Markdown日報出力**: その日のTODOをMarkdownファイルとして書き出し
+
+## 技術スタック
+
+| 領域 | 技術 |
+|------|------|
+| デスクトップフレームワーク | Tauri 2.x |
+| フロントエンド | React 18 + TypeScript + Vite |
+| スタイリング | Tailwind CSS |
+| データベース | SQLite (rusqlite) |
+| 日付操作 | date-fns |
+
+## 開発環境のセットアップ
+
+### 必要条件
+
+- Node.js 18+
+- Rust 1.70+
+- macOS / Windows / Linux
+
+### インストール
+
+```bash
+# 依存関係のインストール
+npm install
+
+# 開発サーバーの起動
+npm run tauri dev
+```
+
+### ビルド
+
+```bash
+# プロダクションビルド
+npm run tauri build
+```
+
+## スクリーンショット
+
+### 今日のTODO
+日付ごとにタスクを管理し、完了状態をチェックできます。
+
+### WBSツリービュー
+プロジェクトとタスクを階層構造で管理できます。
+
+### ガントチャート
+タスクの期間をタイムラインで視覚化し、ドラッグ&ドロップで調整できます。
+
+### 日報出力
+その日のTODOをMarkdownファイルとして書き出せます。
+
+## ライセンス
+
+MIT
